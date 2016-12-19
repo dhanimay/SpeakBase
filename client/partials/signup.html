@@ -1,0 +1,14 @@
+<div class="signUpPartial">
+  <h1 class='companyTitle'>Speakbase</h1>
+  <form name='signUpForm' class='signUpForm' ng-submit='signUp()'>
+    <h3>Hello,<br></h3>
+    <span class='usernameWrapper'>"<input class='signUpUsername' type='text' ng-focus='clearText($event.target)' ng-model='signUpUsername' value='username'></input>"</span>
+    <span class='promptPassword'>can you prove its you</span>
+    <input class='signUpPassword' type='password' ng-focus='clearText($event.target)' ng-model='signUpPassword' value='password'></input>
+    <input class='signUpSubmit'  type='submit' value='Begin' />
+    <input type='button' class='helloTest' ng-click='sayHello(http)' value='hello'></input>
+    <input class='toSignUp' type='button' ng-click='toSignUp()' value='Sign Up'></input>
+    <input class='toLogin' type='button' ng-click='toLogin()' value='Login'></input>
+    <input type='button' ng-click='initAnnyang()' value='TestVoice'></input>
+  </form>
+</div>

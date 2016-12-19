@@ -1,13 +1,14 @@
 <div class="homePartial">
   <h1 class='companyTitle'>Speakbase</h1>
-  <form class='loginForm' ng-submit='login()'>
+  <form name='loginForm' class='loginForm' ng-submit='login()'>
     <h3>Hello,<br></h3>
-    <span class='usernameWrapper'>"<input class='loginUsername' type='text' ng-model='loginUsername' value='username'></input>"</span>
+    <span class='usernameWrapper'>"<input class='loginUsername' type='text' ng-focus='clearText($event.target)' ng-model='loginUsername' value='username'></input>"</span>
     <span class='promptPassword'>can you prove its you</span>
-    <input class='loginPassword' type='text' ng-model='loginPassword' value='password'></input>
+    <input class='loginPassword' type='password' ng-focus='clearText($event.target)' ng-model='loginPassword' value='password'></input>
     <input class='loginSubmit'  type='submit' value='Begin' />
-    <input type='button' class='helloTest' ng-click='sayHello()' value='hello'></input>
+    <input type='button' class='helloTest' ng-click='sayHello(http)' value='hello'></input>
     <input class='toSignUp' type='button' ng-click='toSignUp()' value='Sign Up'></input>
     <input class='toLogin' type='button' ng-click='toLogin()' value='Login'></input>
+    <input type='button' ng-click='initAnnyang()' value='TestVoice'></input>
   </form>
 </div>
