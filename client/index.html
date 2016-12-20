@@ -12,16 +12,21 @@
   <script type='text/javascript' src='./factories/authService.js'></script>
   <script type='text/javascript' src='./factories/queryService.js'></script>
   <script type='text/javascript' src='./factories/userFactory.js'></script>
+  <script type='text/javascript' src='./factories/tableFactory.js'></script>
+  <script type='text/javascript' src='./factories/domService.js'></script>
   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
   <script type='text/javascript' src='annyang/dist/annyang.min.js'></script>
   <script type="text/javascript" src="./app.js"></script>
 
    <link rel="stylesheet" href="style.css">
+   <link rel='stylesheet' href='tabelStyles.css'>
 </head>
 <body ng-app='myApp'>
   <!--Notice the link with the octothorpe first-->
   <!--Our templates are rendered here-->
   <div class="container" ng-view></div>
-
+  <div class="testButton">
+    <input type='button' value='Run Test' />
+  </div>
 </body>
 </html>

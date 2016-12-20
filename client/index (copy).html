@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <!-- <script type="text/javascript" src="angular/angular.min.js"></script>
+  <script type="text/javascript" src="angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="./controllers/homeController.js"></script>
+  <script type="text/javascript" src="./controllers/signUpController.js"></script>
+  <script type="text/javascript" src="./controllers/mainController.js"></script>
+  <script type='text/javascript' src='./factories/authService.js'></script>
+  <script type='text/javascript' src='./factories/queryService.js'></script>
+  <script type='text/javascript' src='./factories/userFactory.js'></script>
+  <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+  <script type='text/javascript' src='annyang/dist/annyang.min.js'></script>
+  <script type="text/javascript" src="./app.js"></script> -->
+
+   <link rel="stylesheet" href="style.css">
+   <link rel='stylesheet' href='tabelStyles.css'>
+</head>
+<body ng-app='myApp'>
+
+  <div class="container" ng-view>
+    <div>
+      <nav class='main'>
+        <button class='profileButton'>{{username}}<span class='profileArrow'>&dArr;</span></button>
+        <h1 class='companyTitle'>SpeakBase</h1>
+        <div class='tableContainer' style='display: block; height: 800px;'>
+          <h1 class='tableTitle'>Redwood</h1>
+          <div class='databaseTable'>
+            <ul class='columns'>
+              <li>_id</li>
+              <li>name</li>
+              <li>createdAt</li>
+              <li>updatedAt</li>
+            </ul>
+              <div class='rows'>
+                <ul class='row'>
+                  <li><input type='text' value='1' ></input></li>
+                  <li><input type='text' value='Greg'></input></li>
+                  <li><input type='text' value='4pm'></input></li>
+                  <li><input type='text' value='5pm'></input></li>
+                </ul>
+                <ul class='row'>
+                  <li><input type='text' value='1' ></input></li>
+                  <li><input type='text' value='Greg'></input></li>
+                  <li><input type='text' value='4pm'></input></li>
+                  <li><input type='text' value='5pm'></input></li>
+                </ul>
+                <ul class='row'>
+                  <li><input type='text' value='1' ></input></li>
+                  <li><input type='text' value='Greg'></input></li>
+                  <li><input type='text' value='4pm'></input></li>
+                  <li><input type='text' value='5pm'></input></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class='profileModal'>
+          <ul>
+            <li>Credits</li>
+            <li>Logout</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+
+</body>
+</html>

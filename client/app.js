@@ -1,5 +1,6 @@
 const app = angular.module("myApp",
- ["ngRoute", "HomeController", 'SignUpController', 'MainController', 'AuthService', 'UserFactory', 'QueryService']);
+ ["ngRoute", "HomeController", 'SignUpController', 'MainController',
+  'AuthService', 'UserFactory', 'QueryService', 'DomService', 'TableFactory']);
 
  app.config(configure);
 

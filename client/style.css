@@ -22,18 +22,26 @@ time, mark, audio, video {
 
 body{
   width: 1200px;
+  height: 950px;
+  background-color: #ece6d3;
 }
 
-.main{
+.main, .container, .ng-scope{
   width: 100%;
   display: block;
   position: relative;
 }
 
+.container{
+  padding: 2rem;
+}
+
+
 .companyTitle{
   display: block;
   margin: 0 auto;
   width: 200px;
+  font-size: 40px;
   color: purple;
 }
 
@@ -90,4 +98,45 @@ body{
 .profileArrow{
   font-size: 18px;
   font-weight: bold;
+}
+
+.profileModal{
+  background-color: white;
+  width: 150px;
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  box-shadow: 1px 1px 2px black;
+  display: none;
+}
+
+.profileModal ul{
+  list-style-type: none;
+  padding: 1px;
+}
+
+.profileModal li{
+  display: block;
+  font: 16px Arial;
+  text-align: center;
+  padding: 6px 10px;
+  width: 100%;
+  /*border-top: 1px solid grey;*/
+  box-shadow: 0 0 1px black;
+  cursor: pointer;
+}
+
+.profileModal li:hover{
+  display: block;
+  background-color: lightgrey;
+}
+
+.testButton{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.testButton input{
+  background-color: red;
 }

@@ -26,12 +26,27 @@ app.post('/validateUser', (req, res)=>{
 });
 
 app.post('/addUser', (req, res)=>{
-  userDb.create(req.body);
+  userDb.create(req.body).then((err)=>{
+    return err;
+  });
 });
 
 
 app.post('/createTable', (req, res)=>{
-  console.log("posting to createTable", clientDb);
+  console.log("received req with tableInfo", req.body);
+  clientDb.createTable(req.body);
+  res.end();
+});
+
+app.post('/addRow', (req, res)=>{
+  clientDb.addRow(req.body);
+  res.end();
+});
+
+app.delete('/dropTable', (req, res)=>{
+  console.log("received req with table name to drop", req.body);
+  clientDb.dropTable(req.body);
+  res.end();
 });
 
 app.listen(8000, () => {

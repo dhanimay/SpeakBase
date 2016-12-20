@@ -9,21 +9,31 @@ const schema = {};
 db.createTable = function(input){
 
   for(let key in input.schema){
+    if(key === 'id'){
+      input.schema[key] = { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true};
+      continue;
+    }
     schema[key] = Sequelize[input.schema[key]];
   }
 
   Table = sequelize.define(input.tableName, schema);
+  Table.sync();
+  console.log(Table);
 };
 
 // db.isValid = function(data){
 //   return Table.findOne();
 // }
 
-db.createRow = function(input){
+db.dropTable = function(name){
+  Table.drop();
+};
 
-  return Table.sync().then(function() {
+db.addRow = function(input){
+
+  Table.sync().then(function() {
     console.log("in clientDb file");
-     return Table.create(input);
+     return Table.create(schema);
   });
 }
 

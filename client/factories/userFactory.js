@@ -4,7 +4,7 @@ angular.module("UserFactory", [])
 
 function UserFactory(){
   return {
-    name: "",
+    name: "Dhani",
     database: {}
   }
 }
